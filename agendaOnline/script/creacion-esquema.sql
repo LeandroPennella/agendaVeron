@@ -1,7 +1,7 @@
 -- password is 'somePassword' hashed con http://www.nitrxgen.net/hashgen/ - Ojo que tal vez haya que agregar un '*' adelante
-CREATE SCHEMA IF NOT EXISTS `appschema`;
+CREATE SCHEMA IF NOT EXISTS `agendaVeron`;
 
-USE `appschema`;
+USE `agendaVeron`;
 
 DROP TABLE IF EXISTS evento_privado;
 DROP TABLE IF EXISTS invitado;
@@ -88,7 +88,7 @@ create table invitado (
 	FOREIGN KEY (eventoId) REFERENCES reunion(eventoId)
 );
 
-GRANT ALL PRIVILEGES ON `appschema`.* TO 'jveron'@'localhost'
+GRANT ALL PRIVILEGES ON `agendaVeron`.* TO 'jveron'@'localhost'
   IDENTIFIED BY PASSWORD '*B04E11FAAAE9A5A019BAF695B40F3BF1997EB194';
 
 
